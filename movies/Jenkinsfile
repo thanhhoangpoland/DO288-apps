@@ -90,14 +90,14 @@ pipeline {
 
         stage('Wait for deployment in DEV env') {
             steps {
-              scripts {
+              script {
                     openshift.withCluster() {
-      openshift.withProject( "${DEV_PROJECT}" ) {
-        openshift.selector("dc", "${APP_NAME}").related('pods').untilEach(1) {
-          return (it.object().status.phase == "Running")
-        }
-      }
-    }
+                      openshift.withProject( "${DEV_PROJECT}" ) {
+                         openshift.selector("dc", "${APP_NAME}").related('pods').untilEach(1) {
+                           return (it.object().status.phase == "Running")
+                                                                              }
+                                                                 }
+                                            }
                       }
                   }
         }

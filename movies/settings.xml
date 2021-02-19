@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <settings>
-        <mirrors>
+       <mirrors>
          <mirror>
          <id>internal-repository</id>
          <name>Maven Repository Manager for classroom</name>
